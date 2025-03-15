@@ -169,7 +169,8 @@ namespace BookHaven.Forms
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error deleting book: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Error deleting book: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Cannot delete this book as it has associated orders!", "Delete Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

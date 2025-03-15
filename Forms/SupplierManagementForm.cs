@@ -172,10 +172,18 @@ namespace BookHaven.Forms
 
             DataGridViewRow row = dgvLowStockBooks.SelectedRows[0];
 
+            // Null-check before using values
+            if (row == null)
+            {
+                MessageBox.Show("No row selected or data is missing.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Fix null reference issues
             RestockBooksForm restockForm = new RestockBooksForm(
-                row.Cells["Title"].Value.ToString(),
-                (int)row.Cells["StockQuantity"].Value,
-                row.Cells["SupplierID"].Value.ToString()
+                row.Cells["Title"].Value?.ToString() ?? "N/A",
+                row.Cells["StockQuantity"].Value != DBNull.Value ? (int)row.Cells["StockQuantity"].Value : 0,
+                row.Cells["SupplierID"].Value?.ToString() ?? "Unknown"
             );
 
             restockForm.ShowDialog();

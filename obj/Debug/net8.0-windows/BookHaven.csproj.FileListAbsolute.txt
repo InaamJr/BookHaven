@@ -95,3 +95,4 @@ E:\MY_IMP\ESOFT\Top-Up\AD\CW 01\BookHaven\bin\Debug\net8.0-windows\Microsoft.Ext
 E:\MY_IMP\ESOFT\Top-Up\AD\CW 01\BookHaven\bin\Debug\net8.0-windows\Microsoft.IO.RecyclableMemoryStream.dll
 E:\MY_IMP\ESOFT\Top-Up\AD\CW 01\BookHaven\bin\Debug\net8.0-windows\System.Drawing.Common.dll
 E:\MY_IMP\ESOFT\Top-Up\AD\CW 01\BookHaven\obj\Debug\net8.0-windows\BookHaven.Forms.ReportsForm.resources
+E:\MY_IMP\ESOFT\Top-Up\AD\CW 01\BookHaven\obj\Debug\net8.0-windows\BookHaven.sourcelink.json
