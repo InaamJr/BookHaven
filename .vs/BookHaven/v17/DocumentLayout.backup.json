@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "E:\\MY_IMP\\ESOFT\\Top-Up\\AD\\CW 01\\BookHaven\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{67305A36-9AD9-4E6A-998D-F17E97FA8F53}|BookHaven.csproj|e:\\my_imp\\esoft\\top-up\\ad\\cw 01\\bookhaven\\forms\\suppliermanagementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67305A36-9AD9-4E6A-998D-F17E97FA8F53}|BookHaven.csproj|solutionrelative:forms\\suppliermanagementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67305A36-9AD9-4E6A-998D-F17E97FA8F53}|BookHaven.csproj|e:\\my_imp\\esoft\\top-up\\ad\\cw 01\\bookhaven\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67305A36-9AD9-4E6A-998D-F17E97FA8F53}|BookHaven.csproj|solutionrelative:forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67305A36-9AD9-4E6A-998D-F17E97FA8F53}|BookHaven.csproj|e:\\my_imp\\esoft\\top-up\\ad\\cw 01\\bookhaven\\forms\\suppliermanagementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{67305A36-9AD9-4E6A-998D-F17E97FA8F53}|BookHaven.csproj|solutionrelative:forms\\suppliermanagementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67305A36-9AD9-4E6A-998D-F17E97FA8F53}|BookHaven.csproj|e:\\my_imp\\esoft\\top-up\\ad\\cw 01\\bookhaven\\forms\\bookmanagementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67305A36-9AD9-4E6A-998D-F17E97FA8F53}|BookHaven.csproj|solutionrelative:forms\\bookmanagementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67305A36-9AD9-4E6A-998D-F17E97FA8F53}|BookHaven.csproj|e:\\my_imp\\esoft\\top-up\\ad\\cw 01\\bookhaven\\forms\\bookmanagementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{67305A36-9AD9-4E6A-998D-F17E97FA8F53}|BookHaven.csproj|solutionrelative:forms\\bookmanagementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67305A36-9AD9-4E6A-998D-F17E97FA8F53}|BookHaven.csproj|e:\\my_imp\\esoft\\top-up\\ad\\cw 01\\bookhaven\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{67305A36-9AD9-4E6A-998D-F17E97FA8F53}|BookHaven.csproj|solutionrelative:forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{67305A36-9AD9-4E6A-998D-F17E97FA8F53}|BookHaven.csproj|e:\\my_imp\\esoft\\top-up\\ad\\cw 01\\bookhaven\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{67305A36-9AD9-4E6A-998D-F17E97FA8F53}|BookHaven.csproj|solutionrelative:forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,68 +18,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SupplierManagementForm.cs [Design]",
-              "DocumentMoniker": "E:\\MY_IMP\\ESOFT\\Top-Up\\AD\\CW 01\\BookHaven\\Forms\\SupplierManagementForm.cs",
-              "RelativeDocumentMoniker": "Forms\\SupplierManagementForm.cs",
-              "ToolTip": "E:\\MY_IMP\\ESOFT\\Top-Up\\AD\\CW 01\\BookHaven\\Forms\\SupplierManagementForm.cs [Design]",
-              "RelativeToolTip": "Forms\\SupplierManagementForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T18:17:53.642Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SupplierManagementForm.cs",
-              "DocumentMoniker": "E:\\MY_IMP\\ESOFT\\Top-Up\\AD\\CW 01\\BookHaven\\Forms\\SupplierManagementForm.cs",
-              "RelativeDocumentMoniker": "Forms\\SupplierManagementForm.cs",
-              "ToolTip": "E:\\MY_IMP\\ESOFT\\Top-Up\\AD\\CW 01\\BookHaven\\Forms\\SupplierManagementForm.cs",
-              "RelativeToolTip": "Forms\\SupplierManagementForm.cs",
-              "ViewState": "AgIAAJoAAAAAAAAAAADwv6wAAABDAAAAAAAAAA==",
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "E:\\MY_IMP\\ESOFT\\Top-Up\\AD\\CW 01\\BookHaven\\Forms\\MainForm.cs",
+              "RelativeDocumentMoniker": "Forms\\MainForm.cs",
+              "ToolTip": "E:\\MY_IMP\\ESOFT\\Top-Up\\AD\\CW 01\\BookHaven\\Forms\\MainForm.cs",
+              "RelativeToolTip": "Forms\\MainForm.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAuwFsAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T18:10:41.684Z",
+              "WhenOpened": "2025-03-17T13:11:06.276Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BookManagementForm.cs",
-              "DocumentMoniker": "E:\\MY_IMP\\ESOFT\\Top-Up\\AD\\CW 01\\BookHaven\\Forms\\BookManagementForm.cs",
-              "RelativeDocumentMoniker": "Forms\\BookManagementForm.cs",
-              "ToolTip": "E:\\MY_IMP\\ESOFT\\Top-Up\\AD\\CW 01\\BookHaven\\Forms\\BookManagementForm.cs",
-              "RelativeToolTip": "Forms\\BookManagementForm.cs",
-              "ViewState": "AgIAAIgAAAAAAAAAAAAswKwAAACUAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "E:\\MY_IMP\\ESOFT\\Top-Up\\AD\\CW 01\\BookHaven\\Forms\\MainForm.cs",
+              "RelativeDocumentMoniker": "Forms\\MainForm.cs",
+              "ToolTip": "E:\\MY_IMP\\ESOFT\\Top-Up\\AD\\CW 01\\BookHaven\\Forms\\MainForm.cs [Design]",
+              "RelativeToolTip": "Forms\\MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T18:12:30.736Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BookManagementForm.cs [Design]",
-              "DocumentMoniker": "E:\\MY_IMP\\ESOFT\\Top-Up\\AD\\CW 01\\BookHaven\\Forms\\BookManagementForm.cs",
-              "RelativeDocumentMoniker": "Forms\\BookManagementForm.cs",
-              "ToolTip": "E:\\MY_IMP\\ESOFT\\Top-Up\\AD\\CW 01\\BookHaven\\Forms\\BookManagementForm.cs [Design]",
-              "RelativeToolTip": "Forms\\BookManagementForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T18:12:27.9Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginForm.cs [Design]",
-              "DocumentMoniker": "E:\\MY_IMP\\ESOFT\\Top-Up\\AD\\CW 01\\BookHaven\\Forms\\LoginForm.cs",
-              "RelativeDocumentMoniker": "Forms\\LoginForm.cs",
-              "ToolTip": "E:\\MY_IMP\\ESOFT\\Top-Up\\AD\\CW 01\\BookHaven\\Forms\\LoginForm.cs [Design]",
-              "RelativeToolTip": "Forms\\LoginForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T17:56:21.77Z",
+              "WhenOpened": "2025-03-17T13:11:03.953Z",
               "EditorCaption": " [Design]"
             }
           ]

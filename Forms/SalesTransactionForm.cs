@@ -180,6 +180,19 @@ namespace BookHaven.Forms
             if (transactionID > 0)
             {
                 MessageBox.Show("Payment processed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Fetch the latest transaction details
+                var processedTransaction = _salesService.GetAllSalesTransactions().FirstOrDefault(t => t.TransactionID == transactionID);
+
+                // Fetch Sales Details for this transaction
+                List<SalesDetailsModel> salesDetails = _salesService.GetSalesDetails(transactionID);
+
+                if (processedTransaction != null && salesDetails.Count > 0)
+                {
+                    // Generate Invoice after payment
+                    GenerateInvoice(processedTransaction, salesDetails);
+                }
+
                 LoadTransactions(); // Refresh the recent transactions table
                 ClearForm();
             }
@@ -226,6 +239,7 @@ namespace BookHaven.Forms
             dgvCart.Rows.Clear();
             lblFinalAmount.Text = "$0.00";
             totalAmount = 0;
+            cmbPaymentMethod.SelectedIndex = -1;
         }
 
         private void btnGenerateInvoice_Click(object sender, EventArgs e)
@@ -261,26 +275,37 @@ namespace BookHaven.Forms
         private void GenerateInvoice(SalesTransactionModel transaction, List<SalesDetailsModel> salesDetails)
         {
             StringBuilder invoice = new StringBuilder();
-            invoice.AppendLine("===== BOOK HAVEN INVOICE =====");
-            invoice.AppendLine($"Transaction ID: {transaction.TransactionID}");
-            invoice.AppendLine($"Customer ID: {transaction.CustomerID}");
-            invoice.AppendLine($"Date: {transaction.TransactionDate}");
-            invoice.AppendLine($"Payment Method: {transaction.PaymentMethod}");
-            invoice.AppendLine("----------------------------------------");
 
-            invoice.AppendLine("Book Title:        Quantity:    Unit Price:   Subtotal:");
-            invoice.AppendLine("----------------------------------------");
+            // Centered header
+            invoice.AppendLine("==============================================================");
+            invoice.AppendLine("                       BOOK HAVEN INVOICE                     ");
+            invoice.AppendLine("==============================================================");
+            invoice.AppendLine($"Transaction ID  : {transaction.TransactionID}");
+            invoice.AppendLine($"Customer ID     : {transaction.CustomerID}");
+            invoice.AppendLine($"Date            : {transaction.TransactionDate:yyyy-MM-dd HH:mm:ss}");
+            invoice.AppendLine($"Payment Method  : {transaction.PaymentMethod}");
+            invoice.AppendLine("--------------------------------------------------------------");
 
+            // Column headers with proper spacing
+            invoice.AppendLine(string.Format("{0,-30} {1,-8} {2,-12} {3,-12}", "Book Title", "Qty", "Unit Price", "Subtotal"));
+            invoice.AppendLine("--------------------------------------------------------------");
+
+            // Line Items
             foreach (var item in salesDetails)
             {
-                invoice.AppendLine($"{item.BookTitle.PadRight(15)} {item.Quantity.ToString().PadRight(10)} {item.PricePerUnit.ToString("C").PadRight(10)} {item.SubTotal.ToString("C")}");
+                invoice.AppendLine(string.Format("{0,-30} {1,-8} {2,-12:C} {3,-12:C}",
+                    item.BookTitle.Length > 28 ? item.BookTitle.Substring(0, 28) + ".." : item.BookTitle, // Trim long book titles
+                    item.Quantity,
+                    item.PricePerUnit,
+                    item.SubTotal));
             }
 
-            invoice.AppendLine("----------------------------------------");
-            invoice.AppendLine($"Total Amount: {transaction.TotalAmount:C}");
-            invoice.AppendLine($"Discount: {transaction.Discount:C}");
-            invoice.AppendLine($"Final Amount: {transaction.FinalAmount:C}");
-            invoice.AppendLine("========================================");
+            // Footer
+            invoice.AppendLine("--------------------------------------------------------------");
+            invoice.AppendLine(string.Format("{0,-30} : {1,12:C}", "Total Amount", transaction.TotalAmount));
+            invoice.AppendLine(string.Format("{0,-30} : {1,12}%", "Discount", transaction.Discount));
+            invoice.AppendLine(string.Format("{0,-30} : {1,12:C}", "Final Amount", transaction.FinalAmount));
+            invoice.AppendLine("==============================================================");
 
             // Save invoice to file (optional)
             string invoicePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), $"Invoice_{transaction.TransactionID}.txt");
@@ -289,7 +314,7 @@ namespace BookHaven.Forms
             // Show confirmation
             MessageBox.Show($"Invoice generated successfully!\nSaved at: {invoicePath}", "Invoice Generated", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            // Optionally, open the invoice file
+            // Open the invoice file
             Process.Start("notepad.exe", invoicePath);
         }
 
@@ -354,9 +379,12 @@ namespace BookHaven.Forms
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MainForm mainForm = new MainForm(Session.LoggedInUserRole);
-            mainForm.Show();
+            this.Close();
+            // Ensure the application exits if no other forms are open
+            if (Application.OpenForms.Count == 0)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnCancelTransaction_Click(object sender, EventArgs e)

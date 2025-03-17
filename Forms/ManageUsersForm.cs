@@ -145,6 +145,11 @@ namespace BookHaven.Forms
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+            // Ensure the application exits if no other forms are open
+            if (Application.OpenForms.Count == 0)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnUnlockUser_Click(object sender, EventArgs e)

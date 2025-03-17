@@ -59,7 +59,7 @@ namespace BookHaven.Forms
         private void btnLogout_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Logged Out of System Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Hide();
+            this.Close();
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
         }
@@ -82,6 +82,12 @@ namespace BookHaven.Forms
 
         private void btnSupplierManagement_Click(object sender, EventArgs e)
         {
+            if (!Session.LoggedInUserRole.Trim().Equals("Admin", StringComparison.OrdinalIgnoreCase))
+            {
+                MessageBox.Show("Access Denied: Only Admins can manage suppliers!", "Security Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             this.Hide();
             SupplierManagementForm SupplierForm = new SupplierManagementForm();
             SupplierForm.ShowDialog();  // Show the Supplier Management Form

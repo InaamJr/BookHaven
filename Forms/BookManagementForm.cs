@@ -217,9 +217,12 @@ namespace BookHaven.Forms
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Hide();  
-            MainForm mainForm = new MainForm(Session.LoggedInUserRole); 
-            mainForm.Show();  
+            this.Close();
+            // Ensure the application exits if no other forms are open
+            if (Application.OpenForms.Count == 0)
+            {
+                Application.Exit();
+            }
         }
     }
 }
